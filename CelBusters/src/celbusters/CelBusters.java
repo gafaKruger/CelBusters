@@ -4,6 +4,9 @@
  */
 package celbusters;
 
+import celbusters.BMP.BMP;
+import java.io.File;
+
 /**
  *
  * @author samuel
@@ -14,6 +17,7 @@ public class CelBusters {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        File f = new File("lena.bmp");
+        BMP bmp = new BMP(f);
     }
 }
