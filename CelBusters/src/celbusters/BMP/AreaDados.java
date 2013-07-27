@@ -4,12 +4,35 @@
  */
 package celbusters.BMP;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Samuel Blum Vorpagel
  */
 public class AreaDados {
-    ArrayList<Byte> pixel = new ArrayList<>();
+   byte[] pixels;
+
+    public AreaDados(byte[] pixels) {
+        this.pixels = pixels;
+    }
+
+    public byte[] getPixels() {
+        return pixels;
+    }
+
+    public void setPixels(byte[] pixels) {
+        this.pixels = pixels;
+    }
+    
+    public byte getPixel (int posicao) {
+        byte [] g = getPixels();
+        return g[posicao];
+    }
+    
+    public void setPixel (int posicao, byte b) {
+        byte [] g = getPixels();
+        g[posicao] = b;
+        setPixels(g);
+    }
+   
+   
 }

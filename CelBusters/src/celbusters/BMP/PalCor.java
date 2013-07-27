@@ -9,8 +9,8 @@ package celbusters.BMP;
  * @author Samuel Blum Vorpagel
  */
 public class PalCor {
-    Byte Blue;
-    Byte Green;
-    Byte Red;
-    Byte Reservado;
+    byte Blue;
+    byte Green;
+    byte Red;
+    byte Reservado;
 }

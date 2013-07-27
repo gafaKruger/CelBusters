@@ -4,14 +4,9 @@
  */
 package celbusters.BMP;
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
+import java.io.RandomAccessFile;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,25 +20,38 @@ public class BMP {
     CabArquivo cabArquivo;
     CabBit cabBit;
     PalCor palCor;
+    byte[] arq;
 
     public BMP(File file) {
-        FileInputStream fi = null;
         try {
-            fi = new FileInputStream(file);
-            byte b;
-            b = (byte) fi.read();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(BMP.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                fi.close();
-            } catch (IOException ex) {
-                Logger.getLogger(BMP.class.getName()).log(Level.SEVERE, null, ex);
+            try (RandomAccessFile rf = new RandomAccessFile(file, "r")) {
+                this.arq = new byte[(int) rf.length()];
+                rf.read(arq);
+                rf.close();
+                byte[] ca = new byte[14];
+                
+                for (int i = 0; i < ca.length; i++) {
+                    ca[i] = this.arq[i];
+                }
+                this.cabArquivo = new CabArquivo(ca);
             }
+        } catch (IOException ex) {
+            Logger.getLogger(BMP.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
     }
 
+    
+    public boolean saveImage (File file) {
+        try {
+            RandomAccessFile rf = new RandomAccessFile(file, "rwd");
+            rf.write(this.arq);
+            return true;
+        } catch (IOException ex) {
+            Logger.getLogger(BMP.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+    
     public AreaDados getAreaDados() {
         return areaDados;
     }

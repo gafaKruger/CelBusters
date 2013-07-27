@@ -19,5 +19,8 @@ public class CelBusters {
     public static void main(String[] args) {
         File f = new File("lena.bmp");
         BMP bmp = new BMP(f);
+        File f2 = new File("BmpTeste.bmp");
+        System.out.println(bmp.saveImage(f2));
+        System.out.println(bmp.getCabArquivo().impInf());
     }
 }

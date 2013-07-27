@@ -9,19 +9,19 @@ package celbusters.BMP;
  * @author Samuel Blum Vorpagel
  */
 public class CabBit {
-    Byte[] BiSize;
-    Byte[] BiWidh;
-    Byte[] BiHeigh;
-    Byte[] BiPlains;
-    Byte[] BiCont;
-    Byte[] BiCompress;
-    Byte[] BiSizeImag;
-    Byte[] BiXPPMeter;
-    Byte[] BiYPPMeter;
-    Byte[] BiClrUsed;
-    Byte[] BiClrImport;
+    byte[] BiSize;
+    byte[] BiWidh;
+    byte[] BiHeigh;
+    byte[] BiPlains;
+    byte[] BiCont;
+    byte[] BiCompress;
+    byte[] BiSizeImag;
+    byte[] BiXPPMeter;
+    byte[] BiYPPMeter;
+    byte[] BiClrUsed;
+    byte[] BiClrImport;
 
-    public CabBit(Byte[] BiSize, Byte[] BiWidh, Byte[] BiHeigh, Byte[] BiPlains, Byte[] BiCont, Byte[] BiCompress, Byte[] BiSizeImag, Byte[] BiXPPMeter, Byte[] BiYPPMeter, Byte[] BiClrUsed, Byte[] BiClrImport) {
+    public CabBit(byte[] BiSize, byte[] BiWidh, byte[] BiHeigh, byte[] BiPlains, byte[] BiCont, byte[] BiCompress, byte[] BiSizeImag, byte[] BiXPPMeter, byte[] BiYPPMeter, byte[] BiClrUsed, byte[] BiClrImport) {
         this.BiSize = BiSize;
         this.BiWidh = BiWidh;
         this.BiHeigh = BiHeigh;
@@ -35,91 +35,91 @@ public class CabBit {
         this.BiClrImport = BiClrImport;
     }
 
-    public Byte[] getBiSize() {
+    public byte[] getBiSize() {
         return BiSize;
     }
 
-    public void setBiSize(Byte[] BiSize) {
+    public void setBiSize(byte[] BiSize) {
         this.BiSize = BiSize;
     }
 
-    public Byte[] getBiWidh() {
+    public byte[] getBiWidh() {
         return BiWidh;
     }
 
-    public void setBiWidh(Byte[] BiWidh) {
+    public void setBiWidh(byte[] BiWidh) {
         this.BiWidh = BiWidh;
     }
 
-    public Byte[] getBiHeigh() {
+    public byte[] getBiHeigh() {
         return BiHeigh;
     }
 
-    public void setBiHeigh(Byte[] BiHeigh) {
+    public void setBiHeigh(byte[] BiHeigh) {
         this.BiHeigh = BiHeigh;
     }
 
-    public Byte[] getBiPlains() {
+    public byte[] getBiPlains() {
         return BiPlains;
     }
 
-    public void setBiPlains(Byte[] BiPlains) {
+    public void setBiPlains(byte[] BiPlains) {
         this.BiPlains = BiPlains;
     }
 
-    public Byte[] getBiCont() {
+    public byte[] getBiCont() {
         return BiCont;
     }
 
-    public void setBiCont(Byte[] BiCont) {
+    public void setBiCont(byte[] BiCont) {
         this.BiCont = BiCont;
     }
 
-    public Byte[] getBiCompress() {
+    public byte[] getBiCompress() {
         return BiCompress;
     }
 
-    public void setBiCompress(Byte[] BiCompress) {
+    public void setBiCompress(byte[] BiCompress) {
         this.BiCompress = BiCompress;
     }
 
-    public Byte[] getBiSizeImag() {
+    public byte[] getBiSizeImag() {
         return BiSizeImag;
     }
 
-    public void setBiSizeImag(Byte[] BiSizeImag) {
+    public void setBiSizeImag(byte[] BiSizeImag) {
         this.BiSizeImag = BiSizeImag;
     }
 
-    public Byte[] getBiXPPMeter() {
+    public byte[] getBiXPPMeter() {
         return BiXPPMeter;
     }
 
-    public void setBiXPPMeter(Byte[] BiXPPMeter) {
+    public void setBiXPPMeter(byte[] BiXPPMeter) {
         this.BiXPPMeter = BiXPPMeter;
     }
 
-    public Byte[] getBiYPPMeter() {
+    public byte[] getBiYPPMeter() {
         return BiYPPMeter;
     }
 
-    public void setBiYPPMeter(Byte[] BiYPPMeter) {
+    public void setBiYPPMeter(byte[] BiYPPMeter) {
         this.BiYPPMeter = BiYPPMeter;
     }
 
-    public Byte[] getBiClrUsed() {
+    public byte[] getBiClrUsed() {
         return BiClrUsed;
     }
 
-    public void setBiClrUsed(Byte[] BiClrUsed) {
+    public void setBiClrUsed(byte[] BiClrUsed) {
         this.BiClrUsed = BiClrUsed;
     }
 
-    public Byte[] getBiClrImport() {
+    public byte[] getBiClrImport() {
         return BiClrImport;
     }
 
-    public void setBiClrImport(Byte[] BiClrImport) {
+    public void setBiClrImport(byte[] BiClrImport) {
         this.BiClrImport = BiClrImport;
     }
     
