@@ -1,4 +1,4 @@
 CelBusters
 ==========
 
-Algoritimo Caçador de Celulas Câncerigenas
+Software caçador de células cancerígenas (versão Java)
