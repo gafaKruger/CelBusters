@@ -4,7 +4,7 @@
  */
 package View;
 
-import Controller.CellBusters;
+import spiceblock.CellBusters;
 import Model.BMP;
 import Model.MatrizPixel;
 import java.awt.Component;
@@ -29,13 +29,13 @@ import javax.swing.JOptionPane;
 public class OPLogicasControlador extends javax.swing.JFrame {
 
     private ArrayList<JanelaImgs> listaImagens;
-    private JFImagem parent;
+    private PainelPrincipal parent;
     private int counter;
 
     /**
      * Creates new form OPLogicasControlador
      */
-    public OPLogicasControlador(JFImagem parentComponent) {
+    public OPLogicasControlador(PainelPrincipal parentComponent) {
         initComponents();
         buttonGroup1.add(opAND);
         buttonGroup1.add(opOR);

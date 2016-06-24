@@ -4,7 +4,7 @@
  */
 package View;
 
-import Controller.CellBusters;
+import spiceblock.CellBusters;
 import Model.BMP;
 import java.io.File;
 import java.io.IOException;
@@ -186,7 +186,7 @@ public class JanelaImgs extends javax.swing.JFrame {
                 rf.write(this.b.save());
                 rf.close();
             } catch (IOException ex) {
-                Logger.getLogger(JFImagem.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(PainelPrincipal.class.getName()).log(Level.SEVERE, null, ex);
             }
             nomeImg = arquivo.getSelectedFile().getName();
             this.setTitle(nomeImg);

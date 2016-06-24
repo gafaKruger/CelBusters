@@ -4,7 +4,8 @@
  */
 package View;
 
-import Controller.CellBusters;
+import Controller.Controller;
+import spiceblock.CellBusters;
 import Model.BMP;
 import java.awt.Dimension;
 import java.io.File;
@@ -20,20 +21,21 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @Autores: Samuel Blum Vorpagel - Rafael Fiori Kruger
  */
-public class JFImagem extends javax.swing.JFrame {
+public class PainelPrincipal extends javax.swing.JFrame {
 
     private BMP b, aux, aux2;
     private boolean OPLogicasaberto, LimiarAberto;
     private OPLogicasControlador opl;
+    private Controller control;
 
-    public JFImagem() {
+    public PainelPrincipal(Controller C) {
         initComponents();
         OPLogicasaberto = false;
         LimiarAberto = false;
         botaoSalvar.setEnabled(false);
     }
 
-    public JFImagem(BMP bmp) {
+    public void resetBMP(BMP bmp) {
         this.b = bmp;
         initComponents();
         LimiarAberto = false;
@@ -234,7 +236,7 @@ public class JFImagem extends javax.swing.JFrame {
                 rf.write(this.b.save());
                 rf.close();
             } catch (IOException ex) {
-                Logger.getLogger(JFImagem.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(PainelPrincipal.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_botaoSalvarActionPerformed

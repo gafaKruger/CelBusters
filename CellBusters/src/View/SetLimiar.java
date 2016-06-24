@@ -13,14 +13,14 @@ import javax.swing.event.ChangeListener;
  */
 public class SetLimiar extends javax.swing.JFrame {
 
-    JFImagem parent;
+    PainelPrincipal parent;
 
     /**
      * Creates new form SetLimiar
      *
      * @param _jfi
      */
-    public SetLimiar(JFImagem _jfi) {
+    public SetLimiar(PainelPrincipal _jfi) {
         initComponents();
         buttonGroup1.add(botaoBinaria);
         buttonGroup1.add(botaoSaturacao);

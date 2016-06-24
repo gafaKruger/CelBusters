@@ -1,18 +1,13 @@
-package Controller;
+package spiceblock;
 
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 
-import Model.BMP;
-import View.JFImagem;
-import java.awt.Dimension;
-import java.io.File;
-import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import Controller.Controller;
+import View.PainelPrincipal;
+import java.awt.Frame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
@@ -37,11 +32,15 @@ public class CellBusters {
             //UIManager.setLookAndFeel(cname);
         }catch(Exception ex){
             JOptionPane.showMessageDialog
-                    (null, ex.getMessage(), "Erro ao carregar Look and Feel (javax.swing.UIManager).", 
+                    (null, ex.getMessage(), "Erro ao carregar configurações de aparência (javax.swing.UIManager).", 
                     JOptionPane.ERROR_MESSAGE);
             System.exit(1);
         }        
-        JFImagem img = new JFImagem();
+        Controller C = new Controller(); 
+        PainelPrincipal img = new PainelPrincipal(C);
+        //C.setPainel(img);
+        img.setExtendedState(Frame.MAXIMIZED_BOTH);
+        //img.setResizable(false);
         img.setVisible(true); 
     }
 }
